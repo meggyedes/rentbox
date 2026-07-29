@@ -53,16 +53,15 @@ button  { font-family: inherit; }
    NAVBAR / HEADER
    ════════════════════════════════════════ */
 .site-header {
-  min-height: 78px;        /* min- hogy a collapse ki tudjon nyílni */
+  min-height: 78px;
   padding: 0 5.5vw;
   position: absolute;
   top: 0; left: 0;
   width: 100%;
-  z-index: 50;
+  z-index: 1000;           /* Bootstrap fixed-top is 1030 — 1000 biztosan minden fölé kerül */
   color: #fff;
-  overflow: visible;       /* ne vágja le a lenyíló menüt */
-  transition: background .35s, backdrop-filter .35s, min-height .35s;
-  /* Bootstrap navbar already does display:flex + align-items:center */
+  overflow: visible;
+  transition: background .35s, backdrop-filter .35s;
 }
 
 /* Nav links */
@@ -157,6 +156,7 @@ button  { font-family: inherit; }
   inset: 0;
   background: url('images/ThuleExcellence/IMG_8676.JPEG') center 56% / cover;
   animation: drift 16s ease-in-out infinite alternate;
+  pointer-events: none;    /* dekoratív elem — ne fogja el a kattintásokat */
 }
 .hero-overlay {
   position: absolute;
@@ -164,6 +164,7 @@ button  { font-family: inherit; }
   background:
     linear-gradient(90deg, rgba(13,27,23,.82) 0%, rgba(13,27,23,.47) 44%, rgba(13,27,23,.08) 75%),
     linear-gradient(0deg, rgba(13,27,23,.25), transparent 40%);
+  pointer-events: none;    /* dekoratív átlátszó overlay — ne fogja el a kattintásokat */
 }
 .hero-content {
   position: relative;
