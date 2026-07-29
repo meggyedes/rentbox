@@ -53,14 +53,15 @@ button  { font-family: inherit; }
    NAVBAR / HEADER
    ════════════════════════════════════════ */
 .site-header {
-  height: 78px;
+  min-height: 78px;        /* min- hogy a collapse ki tudjon nyílni */
   padding: 0 5.5vw;
   position: absolute;
   top: 0; left: 0;
   width: 100%;
   z-index: 50;
   color: #fff;
-  transition: background .35s, backdrop-filter .35s, height .35s;
+  overflow: visible;       /* ne vágja le a lenyíló menüt */
+  transition: background .35s, backdrop-filter .35s, min-height .35s;
   /* Bootstrap navbar already does display:flex + align-items:center */
 }
 
@@ -83,22 +84,29 @@ button  { font-family: inherit; }
   backdrop-filter: blur(12px);
 }
 
-/* ── Hamburger toggle (custom lines, not BS icon) ── */
+/* Hamburger toggle gomb */
 .nav-toggle {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  padding: 8px !important;
-  background: transparent;
-  border: 0 !important;
+  justify-content: center;
+  gap: 6px;
+  width: 42px;
+  height: 42px;
+  padding: 9px !important;   /* !important: Bootstrap p-0 utility ellen */
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25) !important;
+  border-radius: 6px;
   box-shadow: none !important;
+  cursor: pointer;
 }
 .nav-toggle span {
   display: block;
-  width: 22px;
-  height: 1px;
+  width: 24px;
+  height: 2px;
   background: #fff;
+  border-radius: 2px;
   pointer-events: none;
+  transition: background .2s;
 }
 
 /* ── Mobile nav dropdown ── */
