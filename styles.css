@@ -69,11 +69,10 @@ button  { font-family: inherit; }
 .site-header .nav-link    { color: rgba(255,255,255,.88) !important; padding: 0 !important; opacity: .88; transition: opacity .2s; }
 .site-header .nav-link:hover { opacity: 1; }
 
-/* Pill "Kapcsolat" link */
+/* "Kapcsolat" link — acid alávonás a többi linktől való megkülönböztetéshez */
 .nav-contact {
-  border: 1px solid rgba(255,255,255,.44);
-  border-radius: 20px;
-  padding: 9px 15px !important;
+  border-bottom: 1.5px solid var(--acid);
+  padding-bottom: 2px;
 }
 
 /* Sticky scrolled state */
@@ -113,7 +112,7 @@ button  { font-family: inherit; }
   }
   .site-header .nav-link     { color: var(--ink) !important; opacity: 1; padding: 8px 0 !important; }
   .site-header .nav-link:hover { opacity: .75; }
-  .nav-contact { border-color: var(--line); }
+  .nav-contact { border-bottom-color: var(--muted); }
   .site-header .navbar-nav   { gap: 0; }
 }
 
