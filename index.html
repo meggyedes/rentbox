@@ -5,17 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Tetőbox bérlés egyszerűen, személyes egyeztetéssel." />
     <title>RENTBOX — Tetőbox bérlés</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="page-loader" aria-hidden="true"><span class="brand-mark">R</span></div>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Rentbox főoldal"><span class="brand-mark">R</span>RENTBOX</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
-      <nav id="navigation"><a href="#boxok">Bérlés</a><a href="#arak">Árak</a><a href="elado.html">Eladó boxok</a><a href="#hogyan">Hogyan működik?</a><a href="#kapcsolat" class="nav-contact">Kapcsolat</a></nav>
+
+    <!-- ── Navbar ── -->
+    <header class="site-header navbar navbar-expand-lg navbar-dark">
+      <a class="brand navbar-brand" href="#top" aria-label="Rentbox főoldal"><span class="brand-mark">R</span>RENTBOX</a>
+      <button class="navbar-toggler nav-toggle border-0 p-0" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navigation"
+        aria-expanded="false" aria-controls="navigation" aria-label="Navigáció megnyitása">
+        <span></span><span></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navigation">
+        <nav class="navbar-nav ms-auto align-items-lg-center">
+          <a class="nav-link" href="#boxok">Bérlés</a>
+          <a class="nav-link" href="#arak">Árak</a>
+          <a class="nav-link" href="elado.html">Eladó boxok</a>
+          <a class="nav-link" href="#hogyan">Hogyan működik?</a>
+          <a class="nav-link nav-contact" href="#kapcsolat">Kapcsolat</a>
+        </nav>
+      </div>
     </header>
 
     <main id="top">
+
+      <!-- ── Hero ── -->
       <section class="hero">
         <div class="hero-photo" role="img" aria-label="Autó tetőboxszal egy hegyi úton"></div>
         <div class="hero-overlay"></div>
@@ -33,112 +50,220 @@
         <div class="scroll-note">Görgess tovább <span></span></div>
       </section>
 
+      <!-- ── Intro ── -->
       <section class="intro section-padding">
         <p class="eyebrow">MINDEN ÉVSZAKRA, BÉRLÉ STŐL HOZZÁD</p>
-        <div class="intro-grid">
-          <h2>Nyáron, télen —<br />mindig befér.</h2>
-          <div class="feature-list">
-            <div class="feature-item">
-              <strong>Nyár: csomagok, sátrak, kerékpáros kellékek</strong>
-              <p>Legyen szó tengerparti nyaralásról, kempingezésről vagy hétvégi kiépülésről — a box mindent befogad, ami az autóban már nem fér el.</p>
-            </div>
-            <div class="feature-item">
-              <strong>Tél: sífelés, snowboard, csizma, rákótalpak</strong>
-              <p>A bulky téli felszerelés tökkéletesen elfoglalja a csomagteret — tetőboxszal viszont kinyerik azt a helyet, amit a családnak szántatok.</p>
-            </div>
-            <div class="feature-item">
-              <strong>Személyes egyeztetés, rejtett díjak nélkül</strong>
-              <p>Ellenőrizzük, hogy a box illik-e az autódhoz, és pontosan azt fizeted, amit megelőzőleg megbeszéltünk.</p>
+        <div class="row align-items-end g-4 g-lg-5 intro-grid">
+          <div class="col-12 col-lg-6">
+            <h2>Nyáron, télen —<br />mindig befér.</h2>
+          </div>
+          <div class="col-12 col-lg-6">
+            <div class="feature-list">
+              <div class="feature-item">
+                <strong>Nyár: csomagok, sátrak, kerékpáros kellékek</strong>
+                <p>Legyen szó tengerparti nyaralásról, kempingezésről vagy hétvégi kiépülésről — a box mindent befogad, ami az autóban már nem fér el.</p>
+              </div>
+              <div class="feature-item">
+                <strong>Tél: sífelés, snowboard, csizma, rákótalpak</strong>
+                <p>A bulky téli felszerelés tökkéletesen elfoglalja a csomagteret — tetőboxszal viszont kinyerik azt a helyet, amit a családnak szántatok.</p>
+              </div>
+              <div class="feature-item">
+                <strong>Személyes egyeztetés, rejtett díjak nélkül</strong>
+                <p>Ellenőrizzük, hogy a box illik-e az autódhoz, és pontosan azt fizeted, amit megelőzőleg megbeszéltünk.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ── Boxok ── -->
       <section id="boxok" class="boxes section-padding">
-        <div class="section-heading"><div><p class="eyebrow">JELENLEG ELÉRHETŐ</p><h2>Válassz tetőboxot.</h2></div><p>Az elérhetőség és a bérlés díja az igény elküldése után, egyeztetéssel kerül megerősítésre.</p></div>
-        <div class="product-grid">
-          <article class="product-card reveal">
-            <div class="product-visual visual-excellence"><span class="product-number">01</span><button class="image-open" type="button" data-image="images/web/IMG_8900.jpg" data-alt="Thule Excellence tetőbox nagy nézetben"><img src="images/web/IMG_8900.jpg" alt="Thule Excellence tetőbox" /></button></div>
-            <div class="product-details"><div><p class="eyebrow">PRÉMIUM / AERODINAMIKUS</p><h3>Thule Excellence</h3></div><span class="arrow">↗</span></div>
-            <p class="product-desc">Sleek, aerodinamikus forma, amelyet egyaránt elkészítettünk sífelésre és nyaralásra. Kétoldali nyitás megkönnyíti a csomagolást, az orráramvonalak pedig csendessé teszik a hosszú autópályás távokat is. Ideális 2–4 fős utazásokhoz.</p>
-            <div class="specs"><span>520 l térfogat</span><span>218 × 94 × 40 cm</span><span>75 kg max.</span><span>Kétoldali nyitás</span><span>Tél és nyár</span></div>
-            <button class="text-link gallery-open" data-gallery="excellence">Összes fotó megtekintése <span>→</span></button><button class="text-link choose-box" data-box="Thule Excellence">Erre kérnék ajánlatot <span>→</span></button>
-          </article>
-          <article class="product-card reveal">
-            <div class="product-visual visual-atlantis"><span class="product-number">02</span><button class="image-open" type="button" data-image="images/web/atlantis-900.jpg" data-alt="Thule Atlantis 900 tetőbox autóra szerelve, nagy nézetben"><img src="images/web/atlantis-900.jpg" alt="Thule Atlantis 900 tetőbox autóra szerelve" /></button></div>
-            <div class="product-details"><div><p class="eyebrow">NAGY CSOMAGTÉR / CSALÁDOS</p><h3>Thule Atlantis 900</h3></div><span class="arrow">↗</span></div>
-            <p class="product-desc">Extra nagy kapacitású box, amelybe belefér a teljes téli sífelszerelés — vagy a család nyári kempingfelszerelése. Hosszabb utakon is stabil, teli terheléssel is csendes. Ideális 4–5 fős utazásokhoz és nagyméretű felszerelésekhez.</p>
-            <div class="specs"><span>650 l térfogat</span><span>Nagy méretű kivitel</span><span>26 kg önsúly</span><span>Snowboard / sí</span><span>Tél és nyár</span></div>
-            <button class="text-link gallery-open" data-gallery="atlantis">Összes fotó megtekintése <span>→</span></button><button class="text-link choose-box" data-box="Thule Atlantis 900">Erre kérnék ajánlatot <span>→</span></button>
-          </article>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">JELENLEG ELÉRHETŐ</p>
+            <h2>Válassz tetőboxot.</h2>
+          </div>
+          <p>Az elérhetőség és a bérlés díja az igény elküldése után, egyeztetéssel kerül megerősítésre.</p>
+        </div>
+        <div class="row g-3 product-grid">
+          <div class="col-12 col-md-6">
+            <article class="product-card reveal h-100">
+              <div class="product-visual visual-excellence">
+                <span class="product-number">01</span>
+                <button class="image-open" type="button" data-image="images/web/IMG_8900.jpg" data-alt="Thule Excellence tetőbox nagy nézetben">
+                  <img src="images/web/IMG_8900.jpg" alt="Thule Excellence tetőbox" />
+                </button>
+              </div>
+              <div class="product-details">
+                <div><p class="eyebrow">PRÉMIUM / AERODINAMIKUS</p><h3>Thule Excellence</h3></div>
+                <span class="arrow">↗</span>
+              </div>
+              <p class="product-desc">Sleek, aerodinamikus forma, amelyet egyaránt elkészítettünk sífelésre és nyaralásra. Kétoldali nyitás megkönnyíti a csomagolást, az orráramvonalak pedig csendessé teszik a hosszú autópályás távokat is. Ideális 2–4 fős utazásokhoz.</p>
+              <div class="specs"><span>520 l térfogat</span><span>218 × 94 × 40 cm</span><span>75 kg max.</span><span>Kétoldali nyitás</span><span>Tél és nyár</span></div>
+              <button class="text-link gallery-open" data-gallery="excellence">Összes fotó megtekintése <span>→</span></button>
+              <button class="text-link choose-box" data-box="Thule Excellence">Erre kérnék ajánlatot <span>→</span></button>
+            </article>
+          </div>
+          <div class="col-12 col-md-6">
+            <article class="product-card reveal h-100">
+              <div class="product-visual visual-atlantis">
+                <span class="product-number">02</span>
+                <button class="image-open" type="button" data-image="images/web/atlantis-900.jpg" data-alt="Thule Atlantis 900 tetőbox autóra szerelve, nagy nézetben">
+                  <img src="images/web/atlantis-900.jpg" alt="Thule Atlantis 900 tetőbox autóra szerelve" />
+                </button>
+              </div>
+              <div class="product-details">
+                <div><p class="eyebrow">NAGY CSOMAGTÉR / CSALÁDOS</p><h3>Thule Atlantis 900</h3></div>
+                <span class="arrow">↗</span>
+              </div>
+              <p class="product-desc">Extra nagy kapacitású box, amelybe belefér a teljes téli sífelszerelés — vagy a család nyári kempingfelszerelése. Hosszabb utakon is stabil, teli terheléssel is csendes. Ideális 4–5 fős utazásokhoz és nagyméretű felszerelésekhez.</p>
+              <div class="specs"><span>650 l térfogat</span><span>Nagy méretű kivitel</span><span>26 kg önsúly</span><span>Snowboard / sí</span><span>Tél és nyár</span></div>
+              <button class="text-link gallery-open" data-gallery="atlantis">Összes fotó megtekintése <span>→</span></button>
+              <button class="text-link choose-box" data-box="Thule Atlantis 900">Erre kérnék ajánlatot <span>→</span></button>
+            </article>
+          </div>
         </div>
         <p class="product-note">A boxok felszerelhetősége az autó tetőcsomagtartójától és a gyártó előírásaitól függ. Foglalás előtt ezt mindig ellenőrizzük.</p>
       </section>
 
+      <!-- ── Vélemények ── -->
       <section class="testimonials section-padding">
         <p class="eyebrow">Ügyfelek mondták</p>
-        <div class="testimonials-grid">
-          <blockquote class="testimonial-card">
-            <p>„Tökéletesen illeszkedett a tetőcsomagтartóra, a box gyönyörű állapotban volt. Ajánlom mindenkinek síelésre!”</p>
-            <cite>— Kovács Péter, Pécs</cite>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p>„Személyes egyeztetés, rugalmas feltételek. Nem volt semmi rejtett díj, pontosan azt kaptuk amit ígértek.”</p>
-            <cite>— Szabó Andrea, Budapest</cite>
-          </blockquote>
-          <blockquote class="testimonial-card">
-            <p>„A 650 literes box egész téli felszerelésünket befogadta. Jövőre is ezt választjuk!”</p>
-            <cite>— Horváth Gábor, Győr</cite>
-          </blockquote>
+        <div class="row g-3 testimonials-grid">
+          <div class="col-12 col-md-4">
+            <blockquote class="testimonial-card h-100">
+              <p>„Tökéletesen illeszkedett a tetőcsomagtartóra, a box gyönyörű állapotban volt. Ajánlom mindenkinek síelésre!"</p>
+              <cite>— Kovács Péter, Pécs</cite>
+            </blockquote>
+          </div>
+          <div class="col-12 col-md-4">
+            <blockquote class="testimonial-card h-100">
+              <p>„Személyes egyeztetés, rugalmas feltételek. Nem volt semmi rejtett díj, pontosan azt kaptuk amit ígértek."</p>
+              <cite>— Szabó Andrea, Budapest</cite>
+            </blockquote>
+          </div>
+          <div class="col-12 col-md-4">
+            <blockquote class="testimonial-card h-100">
+              <p>„A 650 literes box egész téli felszerelésünket befogadta. Jövőre is ezt választjuk!"</p>
+              <cite>— Horváth Gábor, Győr</cite>
+            </blockquote>
+          </div>
         </div>
       </section>
 
+      <!-- ── Árak ── -->
       <section id="arak" class="pricing section-padding">
-        <div class="section-heading"><div><p class="eyebrow">ÁTLÁTHATÓ FELTÉTELEK</p><h2>Árak, rejtett sorok nélkül.</h2></div><p>A bérleti díj a foglalás visszaigazolásakor válik véglegessé. A kauciót a sértetlen box visszaadásakor visszaadjuk.</p></div>
-        <div class="price-grid">
-          <article class="price-card"><p class="eyebrow">THULE EXCELLENCE</p><h3>5 500 <small>Ft / nap</small></h3><p class="longer">7 naptól <strong>5 000 Ft / nap</strong></p><ul><li>470 literes prémium box</li><li>Felszerelés egyeztetéssel</li><li>Minimum bérlés: 3 nap</li></ul><button class="text-link choose-box" data-box="Thule Excellence">Ezt választom <span>→</span></button></article>
-          <article class="price-card featured"><span class="price-badge">NAGY CSOMAGTÉR</span><p class="eyebrow">THULE ATLANTIS 900</p><h3>5 000 <small>Ft / nap</small></h3><p class="longer">7 naptól <strong>4 700 Ft / nap</strong></p><ul><li>650 literes, extra nagy kivitel</li><li>Felszerelés egyeztetéssel</li><li>Minimum bérlés: 3 nap</li></ul><button class="text-link choose-box" data-box="Thule Atlantis 900">Ezt választom <span>→</span></button></article>
-          <aside class="deposit-card"><span class="deposit-icon">⌁</span><p class="eyebrow">KAUCIÓ</p><strong>40 000 Ft</strong><p>A bérlés kezdetekor fizetendő, a box épségben és tisztán történő visszaadásakor teljes összegben visszajár.</p><span class="deposit-detail">Személyi igazolvány és lakcímkártya szükséges.</span></aside>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ÁTLÁTHATÓ FELTÉTELEK</p>
+            <h2>Árak, rejtett sorok nélkül.</h2>
+          </div>
+          <p>A bérleti díj a foglalás visszaigazolásakor válik véglegessé. A kauciót a sértetlen box visszaadásakor visszaadjuk.</p>
+        </div>
+        <div class="row g-3 price-grid">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="price-card h-100">
+              <p class="eyebrow">THULE EXCELLENCE</p>
+              <h3>5 500 <small>Ft / nap</small></h3>
+              <p class="longer">7 naptól <strong>5 000 Ft / nap</strong></p>
+              <ul><li>470 literes prémium box</li><li>Felszerelés egyeztetéssel</li><li>Minimum bérlés: 3 nap</li></ul>
+              <button class="text-link choose-box" data-box="Thule Excellence">Ezt választom <span>→</span></button>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="price-card featured h-100">
+              <span class="price-badge">NAGY CSOMAGTÉR</span>
+              <p class="eyebrow">THULE ATLANTIS 900</p>
+              <h3>5 000 <small>Ft / nap</small></h3>
+              <p class="longer">7 naptól <strong>4 700 Ft / nap</strong></p>
+              <ul><li>650 literes, extra nagy kivitel</li><li>Felszerelés egyeztetéssel</li><li>Minimum bérlés: 3 nap</li></ul>
+              <button class="text-link choose-box" data-box="Thule Atlantis 900">Ezt választom <span>→</span></button>
+            </article>
+          </div>
+          <div class="col-12 col-md-12 col-lg-4">
+            <aside class="deposit-card h-100">
+              <span class="deposit-icon">⌁</span>
+              <p class="eyebrow">KAUCIÓ</p>
+              <strong>40 000 Ft</strong>
+              <p>A bérlés kezdetekor fizetendő, a box épségben és tisztán történő visszaadásakor teljes összegben visszajár.</p>
+              <span class="deposit-detail">Személyi igazolvány és lakcímkártya szükséges.</span>
+            </aside>
+          </div>
         </div>
       </section>
 
+      <!-- ── Hogyan működik ── -->
       <section id="hogyan" class="steps section-padding">
-        <p class="eyebrow light">FOGLALÁS MENETE</p><h2>Az út 3 egyszerű lépésben indul.</h2>
-        <div class="steps-grid">
-          <article>
-            <span class="step-num">01</span>
-            <h3>Válassz</h3>
-            <p>Nézd meg a jelenleg bérelhető tetőboxokat, és válaszd ki a számodra ideális méretet.</p>
-            <a href="#boxok" class="step-link">Boxok megtekintése →</a>
-          </article>
-          <article>
-            <span class="step-num">02</span>
-            <h3>Írj nekünk</h3>
-            <p>Küldd el, mikorra és milyen autóhoz keresel boxot. A levélhez sablont is adunk.</p>
-            <a href="#kapcsolat" class="step-link">Ajánlatkérés →</a>
-          </article>
-          <article>
-            <span class="step-num">03</span>
-            <h3>Egyeztetünk</h3>
-            <p>Visszajelzünk az elérhetőségről, a díjról és az átvétel részleteiről — csak ezután végleges a bérlés.</p>
-          </article>
+        <p class="eyebrow light">FOGLALÁS MENETE</p>
+        <h2>Az út 3 egyszerű lépésben indul.</h2>
+        <div class="row steps-grid">
+          <div class="col-12 col-md-4">
+            <article>
+              <span class="step-num">01</span>
+              <h3>Válassz</h3>
+              <p>Nézd meg a jelenleg bérelhető tetőboxokat, és válaszd ki a számodra ideális méretet.</p>
+              <a href="#boxok" class="step-link">Boxok megtekintése →</a>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article>
+              <span class="step-num">02</span>
+              <h3>Írj nekünk</h3>
+              <p>Küldd el, mikorra és milyen autóhoz keresel boxot. A levélhez sablont is adunk.</p>
+              <a href="#kapcsolat" class="step-link">Ajánlatkérés →</a>
+            </article>
+          </div>
+          <div class="col-12 col-md-4">
+            <article>
+              <span class="step-num">03</span>
+              <h3>Egyeztetünk</h3>
+              <p>Visszajelzünk az elérhetőségről, a díjról és az átvétel részleteiről — csak ezután végleges a bérlés.</p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- ── Kapcsolat ── -->
       <section id="kapcsolat" class="contact section-padding">
-        <div><p class="eyebrow">KÉRJ EGYEDI AJÁNLATOT</p><h2>Hová indulnátok?</h2><p class="contact-copy">Pár sor elég: írd meg a kiválasztott boxot, az időpontot és az autó típusát. Minden további részletet egyeztetünk.</p></div>
-        <form id="inquiry-form" class="inquiry-form">
-          <label>Név<input required name="name" autocomplete="name" placeholder="Teljes neved" /></label>
-          <label>E-mail<input required name="email" type="email" autocomplete="email" placeholder="email@pelda.hu" /></label>
-          <div class="form-row"><label>Érkezés<input required name="from" type="date" /></label><label>Visszahozás<input required name="to" type="date" /></label></div>
-          <label>Üzenet<textarea name="message" rows="3" placeholder="Pl. Thule Atlantis 900, Skoda Octavia kombihoz."></textarea></label>
-          <p class="form-hint">Az „igény elküldése” megnyitja a leveleződet egy kitöltött e-maillel. A küldés még nem jelent foglalást.</p>
-          <button class="button button-dark" type="submit">Igény elküldése <span>→</span></button>
-        </form>
+        <div class="row align-items-start g-4 g-lg-5">
+          <div class="col-12 col-lg-5">
+            <p class="eyebrow">KÉRJ EGYEDI AJÁNLATOT</p>
+            <h2>Hová indulnátok?</h2>
+            <p class="contact-copy">Pár sor elég: írd meg a kiválasztott boxot, az időpontot és az autó típusát. Minden további részletet egyeztetünk.</p>
+          </div>
+          <div class="col-12 col-lg-7">
+            <form id="inquiry-form" class="inquiry-form">
+              <label>Név<input required name="name" autocomplete="name" placeholder="Teljes neved" /></label>
+              <label>E-mail<input required name="email" type="email" autocomplete="email" placeholder="email@pelda.hu" /></label>
+              <div class="form-row">
+                <label>Érkezés<input required name="from" type="date" /></label>
+                <label>Visszahozás<input required name="to" type="date" /></label>
+              </div>
+              <label>Üzenet<textarea name="message" rows="3" placeholder="Pl. Thule Atlantis 900, Skoda Octavia kombihoz."></textarea></label>
+              <p class="form-hint">Az „igény elküldése" megnyitja a leveleződet egy kitöltött e-maillel. A küldés még nem jelent foglalást.</p>
+              <button class="button button-dark" type="submit">Igény elküldése <span>→</span></button>
+            </form>
+          </div>
+        </div>
       </section>
+
     </main>
-    <footer><a class="brand" href="#top"><span class="brand-mark">R</span>RENTBOX</a><p>© <span id="year"></span> Rentbox. Tetőbox bérlés.</p><a href="#kapcsolat">Kapcsolat ↑</a></footer>
-    <dialog class="image-modal" id="image-modal"><button class="modal-close" type="button" aria-label="Kép bezárása">×</button><button class="gallery-nav gallery-prev" type="button" aria-label="Előző kép">←</button><img src="" alt="" /><button class="gallery-nav gallery-next" type="button" aria-label="Következő kép">→</button><p class="gallery-counter"></p></dialog>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark">R</span>RENTBOX</a>
+      <p>© <span id="year"></span> Rentbox. Tetőbox bérlés.</p>
+      <a href="#kapcsolat">Kapcsolat ↑</a>
+    </footer>
+
+    <dialog class="image-modal" id="image-modal">
+      <button class="modal-close" type="button" aria-label="Kép bezárása">×</button>
+      <button class="gallery-nav gallery-prev" type="button" aria-label="Előző kép">←</button>
+      <img src="" alt="" />
+      <button class="gallery-nav gallery-next" type="button" aria-label="Következő kép">→</button>
+      <p class="gallery-counter"></p>
+    </dialog>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmSXAWncMmFeBHHCf0BQpnuXVYP4" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </body>
 </html>

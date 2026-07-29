@@ -4,15 +4,15 @@ const recipientEmail = 'IDE_IRD_A_SAJAT_EMAIL_CIMED@pelda.hu';
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
 
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('navigation');
-if (navToggle && nav) navToggle.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', isOpen);
-});
-if (nav) nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-  nav.classList.remove('open'); navToggle.setAttribute('aria-expanded', 'false');
-}));
+// Bootstrap kezeli a hamburger menü toggle-t.
+// Csak azt adjuk hozzá, hogy hash-linkre kattintva mobilon bezáródjék a collapse.
+const navCollapse = document.getElementById('navigation');
+if (navCollapse) {
+  navCollapse.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+    const bsCollapse = window.bootstrap?.Collapse.getInstance(navCollapse);
+    if (bsCollapse) bsCollapse.hide();
+  }));
+}
 
 document.querySelectorAll('.choose-box').forEach(button => button.addEventListener('click', () => {
   const contact = document.querySelector('#kapcsolat');
